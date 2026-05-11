@@ -18,7 +18,7 @@ import {
   IconAlertCircle, IconTool, IconRefresh, IconCheck,
   IconBug, IconBugOff, IconPlus, IconPencil, IconTrash,
   IconAlertTriangle, IconCircleCheck, IconCircleX, IconLoader2,
-  IconDeviceMobile, IconVersions, IconTools,
+  IconDeviceMobile, IconVersions, IconTools, IconChevronRight,
 } from '@tabler/icons-react';
 
 const APPGROUP_ID = '6a01f2917c6d6245f4e3186a';
@@ -118,6 +118,30 @@ export default function DashboardOverview() {
 
   return (
     <div className="space-y-6">
+      {/* Workflow-Aktionen */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+        <a href="#/intents/bug-melden" className="flex items-center gap-4 bg-card border border-border border-l-4 border-l-primary rounded-xl p-4 shadow-sm hover:shadow-md transition-shadow group">
+          <div className="shrink-0 w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
+            <IconBug size={20} className="text-primary" stroke={1.5} />
+          </div>
+          <div className="flex-1 min-w-0">
+            <p className="font-semibold text-sm text-foreground">Fehler melden</p>
+            <p className="text-xs text-muted-foreground truncate">Gerät & iOS-Version auswählen, Fehlerbericht einreichen</p>
+          </div>
+          <IconChevronRight size={16} className="shrink-0 text-muted-foreground group-hover:text-foreground transition-colors" />
+        </a>
+        <a href="#/intents/bug-beheben" className="flex items-center gap-4 bg-card border border-border border-l-4 border-l-primary rounded-xl p-4 shadow-sm hover:shadow-md transition-shadow group">
+          <div className="shrink-0 w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
+            <IconTools size={20} className="text-primary" stroke={1.5} />
+          </div>
+          <div className="flex-1 min-w-0">
+            <p className="font-semibold text-sm text-foreground">Fehler beheben</p>
+            <p className="text-xs text-muted-foreground truncate">Offenen Fehler auswählen, Fix dokumentieren & als behoben markieren</p>
+          </div>
+          <IconChevronRight size={16} className="shrink-0 text-muted-foreground group-hover:text-foreground transition-colors" />
+        </a>
+      </div>
+
       {/* KPI-Zeile */}
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-3">
         <StatCard

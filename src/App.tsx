@@ -6,7 +6,6 @@ import { ErrorBoundary } from '@/components/ErrorBoundary';
 import { ErrorBusProvider } from '@/components/ErrorBus';
 import { Layout } from '@/components/Layout';
 import DashboardOverview from '@/pages/DashboardOverview';
-import { WorkflowPlaceholders } from '@/components/WorkflowPlaceholders';
 import AdminPage from '@/pages/AdminPage';
 import IosVersionenPage from '@/pages/IosVersionenPage';
 import GeraetePage from '@/pages/GeraetePage';
@@ -19,6 +18,8 @@ import PublicFormFehlerbehebung from '@/pages/public/PublicForm_Fehlerbehebung';
 // <public:imports>
 // </public:imports>
 // <custom:imports>
+const BugMeldenPage = lazy(() => import('@/pages/intents/BugMeldenPage'));
+const BugBehebenPage = lazy(() => import('@/pages/intents/BugBehebenPage'));
 // </custom:imports>
 
 export default function App() {
@@ -35,13 +36,15 @@ export default function App() {
               {/* <public:routes> */}
               {/* </public:routes> */}
               <Route element={<Layout />}>
-                <Route index element={<><div className="mb-8"><WorkflowPlaceholders /></div><DashboardOverview /></>} />
+                <Route index element={<DashboardOverview />} />
                 <Route path="ios-versionen" element={<IosVersionenPage />} />
                 <Route path="geraete" element={<GeraetePage />} />
                 <Route path="fehlerberichte" element={<FehlerberichtePage />} />
                 <Route path="fehlerbehebung" element={<FehlerbehebungPage />} />
                 <Route path="admin" element={<AdminPage />} />
                 {/* <custom:routes> */}
+                <Route path="intents/bug-melden" element={<Suspense fallback={null}><BugMeldenPage /></Suspense>} />
+                <Route path="intents/bug-beheben" element={<Suspense fallback={null}><BugBehebenPage /></Suspense>} />
                 {/* </custom:routes> */}
               </Route>
             </Routes>
