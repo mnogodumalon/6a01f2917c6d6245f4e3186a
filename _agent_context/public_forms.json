@@ -1,0 +1,68 @@
+{
+  "version": 1,
+  "forms": [
+    {
+      "entity": "ios_versionen",
+      "app_id": "6a01f2691f0ec566018b68a7",
+      "path": "/rest/apps/6a01f2691f0ec566018b68a7/records",
+      "allowed_fields": [
+        "versionsnummer",
+        "veroeffentlichungsdatum",
+        "versionshinweise"
+      ],
+      "pow": true,
+      "pow_difficulty": 50000,
+      "title": "iOS Versionen — Formular"
+    },
+    {
+      "entity": "geraete",
+      "app_id": "6a01f2712fbe920228001854",
+      "path": "/rest/apps/6a01f2712fbe920228001854/records",
+      "allowed_fields": [
+        "geraet_name",
+        "geraet_modell",
+        "geraet_typ",
+        "geraet_notizen"
+      ],
+      "pow": true,
+      "pow_difficulty": 50000,
+      "title": "Geräte — Formular"
+    },
+    {
+      "entity": "fehlerberichte",
+      "app_id": "6a01f27386a0e488786a9877",
+      "path": "/rest/apps/6a01f27386a0e488786a9877/records",
+      "allowed_fields": [
+        "meldedatum",
+        "melder_vorname",
+        "melder_nachname",
+        "melder_email",
+        "zusaetzliche_hinweise",
+        "fehler_titel",
+        "fehler_beschreibung",
+        "schritte_reproduzieren",
+        "schweregrad",
+        "status"
+      ],
+      "pow": true,
+      "pow_difficulty": 50000,
+      "title": "Fehlerberichte — Formular"
+    },
+    {
+      "entity": "fehlerbehebung",
+      "app_id": "6a01f275a49057ebfe7b5d5e",
+      "path": "/rest/apps/6a01f275a49057ebfe7b5d5e/records",
+      "allowed_fields": [
+        "fix_beschreibung",
+        "behebung_notizen",
+        "entwickler_vorname",
+        "entwickler_nachname",
+        "behebungsdatum",
+        "behebungsstatus"
+      ],
+      "pow": true,
+      "pow_difficulty": 50000,
+      "title": "Fehlerbehebung — Formular"
+    }
+  ]
+}

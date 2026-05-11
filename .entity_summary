@@ -1,0 +1,8 @@
+- iOS Versionen (ios_versionen): versionsnummer[string/text], veroeffentlichungsdatum[date/date], versionshinweise[string/textarea]
+- Geräte (geraete): geraet_name[string/text], geraet_modell[string/text], geraet_typ[lookup/select], geraet_notizen[string/textarea]
+- Fehlerberichte (fehlerberichte): betroffene_geraete[applookup/select], meldedatum[date/date], melder_vorname[string/text], melder_nachname[string/text], melder_email[string/email], screenshot[file], zusaetzliche_hinweise[string/textarea], betroffene_ios_version[applookup/select], fehler_titel[string/text], fehler_beschreibung[string/textarea], schritte_reproduzieren[string/textarea], schweregrad[lookup/select], status[lookup/select]
+  → betroffene_geraete links to app_id 6a01f2712fbe920228001854
+  → betroffene_ios_version links to app_id 6a01f2691f0ec566018b68a7
+- Fehlerbehebung (fehlerbehebung): fix_beschreibung[string/textarea], behoben_in_version[applookup/select], behebung_notizen[string/textarea], fehler_referenz[applookup/select], entwickler_vorname[string/text], entwickler_nachname[string/text], behebungsdatum[date/date], behebungsstatus[lookup/select]
+  → behoben_in_version links to app_id 6a01f2691f0ec566018b68a7
+  → fehler_referenz links to app_id 6a01f27386a0e488786a9877
